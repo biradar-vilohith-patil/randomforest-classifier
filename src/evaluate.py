@@ -6,12 +6,12 @@ def evaluate_performance(pipeline, X_test, y_test):
     y_pred = pipeline.predict(X_test)
     
     acc = accuracy_score(y_test, y_pred)
-    print(f"Accuracy: {acc}")
+    print(f"Accuracy: {acc * 100:.2f}%")
     print(classification_report(y_test, y_pred))
 
 if __name__ == "__main__":
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    data_path = os.path.join(base_dir, 'data', 'cleaned_heart.csv')
+    data_path = os.path.join(base_dir, 'data', 'cleaned_sleep_health.csv')
     models_dir = os.path.join(base_dir, 'models')
     
     pipeline, X_test, y_test = train_and_save_model(data_path, models_dir)

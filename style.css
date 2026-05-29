@@ -1,50 +1,64 @@
 .stApp {
-    background-color: #0b0f19;
+    background-color: #0f172a;
     font-family: 'Inter', -apple-system, sans-serif;
-    color: #e0e0e0;
+    color: #cbd5e1;
 }
 
 h1 {
-    color: #ffffff !important;
+    color: #f8fafc !important;
     font-weight: 800;
     text-align: center;
 }
 
-div[data-testid="stMarkdownContainer"] > p {
-    color: #94a3b8;
-    text-align: center;
-}
-
-div[data-baseweb="select"] > div, .stNumberInput input {
+div[data-baseweb="select"] > div, .stSlider {
     background-color: #1e293b !important;
     border: 1px solid #334155 !important;
     border-radius: 8px;
-    color: #f8fafc !important;
+    padding: 10px;
+}
+
+div[data-baseweb="select"] > div:hover {
+    border-color: #64748b !important;
 }
 
 .stButton > button {
     width: 100%;
-    background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+    background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);
     color: #ffffff !important;
     border: none;
-    padding: 16px;
+    padding: 18px;
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.stButton > button:hover {
+    background: linear-gradient(135deg, #818cf8 0%, #4f46e5 100%);
+    transform: translateY(-2px);
 }
 
 .stSuccess {
     background-color: #064e3b;
-    border: 1px solid #10b981;
+    border: 1px solid #059669;
     border-radius: 12px;
     padding: 25px;
-    text-align: center;
+    margin-top: 20px;
+}
+
+.stWarning {
+    background-color: #78350f;
+    border: 1px solid #d97706;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
 }
 
 .stError {
     background-color: #7f1d1d;
-    border: 1px solid #ef4444;
+    border: 1px solid #dc2626;
     border-radius: 12px;
     padding: 25px;
-    text-align: center;
+    margin-top: 20px;
 }
