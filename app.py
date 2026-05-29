@@ -38,8 +38,11 @@ if st.button("Analyze Sleep Profile"):
     prediction, confidence = run_inference(user_data)
     
     if prediction == 'None':
-        st.success(f"<h2 style='color: white; text-align: center;'>Healthy Sleep Profile Detected</h2><h4 style='color: #a7f3d0; text-align: center;'>Confidence: {confidence:.1f}%</h4><p style='text-align: center; color: white;'>Your lifestyle metrics indicate a low risk for clinical sleep disorders.</p>", unsafe_allow_html=True)
+        st.success("Healthy Sleep Profile Detected")
+        st.markdown(f"<h4 style='color: #a7f3d0; text-align: center;'>Confidence: {confidence:.1f}%</h4><p style='text-align: center; color: white;'>Your lifestyle metrics indicate a low risk for clinical sleep disorders.</p>", unsafe_allow_html=True)
     elif prediction == 'Insomnia':
-        st.warning(f"<h2 style='color: white; text-align: center;'>Insomnia Risk Detected</h2><h4 style='color: #fde68a; text-align: center;'>Confidence: {confidence:.1f}%</h4><p style='text-align: center; color: white;'>Your profile shows markers commonly associated with Insomnia. Consider evaluating your stress levels and screen time before bed.</p>", unsafe_allow_html=True)
+        st.warning("Insomnia Risk Detected")
+        st.markdown(f"<h4 style='color: #fde68a; text-align: center;'>Confidence: {confidence:.1f}%</h4><p style='text-align: center; color: white;'>Your profile shows markers commonly associated with Insomnia. Consider evaluating your stress levels and screen time before bed.</p>", unsafe_allow_html=True)
     elif prediction == 'Sleep Apnea':
-        st.error(f"<h2 style='color: white; text-align: center;'>Sleep Apnea Risk Detected</h2><h4 style='color: #fecaca; text-align: center;'>Confidence: {confidence:.1f}%</h4><p style='text-align: center; color: white;'>Your profile aligns with patterns of Sleep Apnea. It is highly recommended to consult a physician for a formal sleep study.</p>", unsafe_allow_html=True)
+        st.error("Sleep Apnea Risk Detected")
+        st.markdown(f"<h4 style='color: #fecaca; text-align: center;'>Confidence: {confidence:.1f}%</h4><p style='text-align: center; color: white;'>Your profile aligns with patterns of Sleep Apnea. It is highly recommended to consult a physician for a formal sleep study.</p>", unsafe_allow_html=True)
