@@ -9,6 +9,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 def train_and_save_model(data_path, models_dir):
     df = pd.read_csv(data_path)
+    df = df.dropna()
     
     X = df.drop('Sleep Disorder', axis=1)
     y = df['Sleep Disorder']
@@ -27,7 +28,7 @@ def train_and_save_model(data_path, models_dir):
     ])
 
     param_grid = {
-        'classifier__n_estimators': [100, 150],
+        'classifier__n_estimators': [100, 150,200,250],
         'classifier__max_depth': [5, 8, 12],
         'classifier__min_samples_split': [10, 20],
         'classifier__min_samples_leaf': [2, 5]
